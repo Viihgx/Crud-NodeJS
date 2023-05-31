@@ -1,0 +1,146 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-image: linear-gradient(to bottom, #ea41ea, #17ffff);
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #ffffff;
+  
+}
+
+/* Estilos do formulário */
+.product-form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px rgb(9 5 7 / 30%);
+}
+
+.product-form h2 {
+  margin-bottom: 20px;
+  color: #9101bd;
+  font-size: 24px;
+}
+
+.product-form input[type="text"],
+.product-form input[type="number"] {
+  flex-grow: 1;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 2px solid #9101bd;
+  border-radius: 3px;
+  transition: border-color 0.3s ease;
+}
+
+.product-form input[type="text"]:focus,
+.product-form input[type="number"]:focus {
+  outline: none;
+  border-color: #00faff;
+}
+
+/* .product-form button {
+  padding: 10px 20px;
+  background-color: #000000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; */
+
+.product-form button {
+  padding: 10px 20px;
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 300% 300%;
+  animation: holographic 3s linear infinite;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+@keyframes holographic {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.product-form button:hover {
+  background-color: #db0000;
+}
+
+/* Estilos da lista de produtos */
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+.product-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px rgb(9 5 7 / 30%);
+  transition: transform 0.3s ease;
+}
+
+.product-item h3 {
+  margin-bottom: 10px;
+  color: #9101bd;
+}
+
+.product-item p {
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.product-item .edit-button,
+.product-item .delete-button {
+  padding: 5px 10px;
+  background-color: #ccc;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-item .edit-button {
+  background-color: transparent;
+  background-image: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+  background-size: 300% 300%;
+  animation: holographic 3s linear infinite;
+  color: white;
+}
+
+.product-item .delete-button {
+  background-color: #000000;
+}
+
+.product-item .edit-button:hover,
+.product-item .delete-button:hover {
+  background-color: #999;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
